@@ -78,6 +78,15 @@ The directories of this repository are organized in the following way:
 
   <br></br>
 ### Main features
+#### Running the end-to-end test suite
+
+The `test-suite/` directory contains end-to-end tests for the full FHEVM stack.
+To run them locally with Docker, you can use:
+
+```bash
+cd test-suite
+docker compose up --build --exit-code-from test-runner
+```
 
 - **Privacy by design:** Building decentralized apps with full privacy and confidentiality on Ethereum, leveraging FHE.
 - **Solidity integration:** Write FHEVM contracts like any standard Solidity contract using Solidity. Compatible with existing toolchains — such as Hardhat and Foundry (*coming soon*).
