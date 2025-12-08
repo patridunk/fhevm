@@ -1,8 +1,14 @@
+# Configuration for linkspector: link checker for documentation and website.
 dirs:
-  - ./
+  - ./          # scan the repository root
+
 aliveStatusCodes:
-  - 200
+  - 200         # all OK
+
 ignorePatterns:
   - pattern: '^https?://localhost.*$'
+    # local development URLs are expected to be unreachable in CI
   - pattern: '^https://stackoverflow.com/.*$'
+    # StackOverflow occasionally rate-limits automated checks
+
 useGitIgnore: true
